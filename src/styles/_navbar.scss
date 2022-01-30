@@ -1,0 +1,42 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: -apple-system;
+    font-style: bold;
+    .navbar-button {
+        background-color: transparent;
+        color: navy; 
+        text-decoration: none; 
+        margin: .5rem 1rem; 
+        padding: .25rem;
+        font-size: 1.25rem;
+        font-family: -apple-system;
+        border-radius: 1rem;
+        transition: border-radius 2s;
+        &:hover {
+            opacity: .75;
+            color: lightblue;
+            border-radius: 1.5rem;
+        }
+    }
+    .active {
+        text-decoration: underline;
+        font-weight: bold; 
+        background-color: transparent;
+        color: navy; 
+        margin: 1rem 1rem; 
+        padding: .5rem;
+        font-size: 1.5rem;
+        transition: border-radius 2s;
+    }
+}
+
+.search-bar {
+    &:hover{
+        background-color: lightgrey;
+    }
+    @media screen and (max-width: 1000px) {
+        display:none;
+    }
+}

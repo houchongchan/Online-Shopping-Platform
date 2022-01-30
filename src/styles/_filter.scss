@@ -1,0 +1,66 @@
+
+.filter_container {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-top: 5rem;
+}
+.clear-container {
+    text-align: center;
+    background: red; 
+    color: white; 
+    border-radius: .5rem;
+    padding: .5rem;
+    text-decoration: none;
+    font-size: 1.25rem;
+    &:hover{
+        background-color: darkred;
+        color: lightgrey;
+
+    }
+    &:active{
+        background-color: darkred;
+        color: lightgrey;
+        cursor: pointer;
+    }
+}
+
+.smaller{
+    margin-top: 2rem;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-evenly;
+    visibility: visible;
+    opacity: 1; 
+    margin-top: 2rem;
+}
+.center {
+    svg{
+        width: 10vw;
+    }
+
+}
+
+.hide {
+    display: none; 
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+};
+
+.show {
+    
+};
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
