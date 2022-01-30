@@ -29,12 +29,6 @@ const SingleProduct = () => {
         fetchSingleProducts(browser_id);
     }, [browser_id, fetchSingleProducts])
 
-    // useEffect(()=>{
-    //     if(amount = single_product && amount !=0){
-    //         setHelperText('Sorry, We dont have  ')
-    //     }
-
-    // }, [amount])
 
     const increaseAmount = (e) => {
         e.preventDefault()
