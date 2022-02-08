@@ -20,7 +20,7 @@ const Navbar = () => {
     return (
         <div className = 'navbar-container' >
             <div className = 'link-container'>
-                <Link to = '/' className = {location.pathname == '/'?'active':'navbar-button'} style ={{marginLeft: '2rem'}}> <GiFastArrow /> </Link>
+                <Link to = '/' className = {location.pathname == '/'?'active':'navbar-button'} style ={{marginLeft: '2rem', marginTop: '1rem', textDecoration: 'none'}}> <GiFastArrow /> </Link>
                 <Link to = '/about' className = {location.pathname == '/about'?'active':'navbar-button'}> ABOUT </Link>
                 <Link to = '/products' className = {location.pathname == '/products'?'active':'navbar-button'}> PRODUCTS </Link>
             </div>

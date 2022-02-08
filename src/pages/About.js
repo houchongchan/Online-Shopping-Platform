@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useGlobalContext} from '../context/context'
 import {GiFastArrow} from 'react-icons/gi'
 import { useLocation } from 'react-router-dom'
+import Header from '../components/Header';
 
 const About = () => {
     const {productState} = useGlobalContext(); 
@@ -32,10 +33,10 @@ const About = () => {
     return (
         <div className = 'container-margin'>
             <div style = {{display: 'flex'}}>
-                <h1>Our Company</h1> <GiFastArrow  size={70} style = {{display: 'block', marginLeft: '2rem', color: 'navy'}}/>
+                <Header text = 'Our Company'/> <GiFastArrow  size={60} style = {{display: 'block', marginLeft: '2rem',marginTop: '1rem', color: 'navy'}}/>
             </div>
             <img src = {randomImage} />
-            <h1>Our Story </h1>
+            <Header text = 'Our Story'/>
             <p className = 'container-margin'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat accusantium sapiente tempora sed dolore esse deserunt eaque excepturi, delectus error accusamus vel eligendi, omnis beatae. Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque dolore, obcaecati incidunt sequi blanditiis est exercitationem molestiae delectus saepe odio eligendi modi porro eaque in libero minus unde sapiente consectetur architecto. Ullam rerum, nemo iste ex, eaque perspiciatis nisi, eum totam velit saepe sed quos similique amet. Ex, voluptate accusamus nesciunt totam vitae esse iste.</p>
         </div>
     )

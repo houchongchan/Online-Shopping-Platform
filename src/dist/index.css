@@ -7,12 +7,13 @@
 
 .clear-container {
   text-align: center;
-  background: red;
   color: white;
   border-radius: .5rem;
   padding: .5rem;
   text-decoration: none;
   font-size: 1.25rem;
+  cursor: pointer;
+  background: red;
 }
 
 .clear-container:hover {
@@ -22,6 +23,39 @@
 
 .clear-container:active {
   background-color: darkred;
+  color: lightgrey;
+}
+
+.clear-container-blue {
+  text-align: center;
+  color: white;
+  border-radius: .5rem;
+  padding: .5rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  background: navy;
+  margin-left: 2rem;
+  margin-top: .5rem;
+}
+
+.clear-container-blue:hover {
+  background-color: darkred;
+  color: lightgrey;
+}
+
+.clear-container-blue:active {
+  background-color: darkred;
+  color: lightgrey;
+}
+
+.clear-container-blue:hover {
+  background-color: darkblue;
+  color: lightgrey;
+}
+
+.clear-container-blue:active {
+  background-color: darkblue;
   color: lightgrey;
   cursor: pointer;
 }
@@ -130,7 +164,6 @@ code {
 }
 
 h1 {
-  border-left: 5rem solid navy;
   text-align: left;
   margin-bottom: 3rem;
 }
@@ -148,6 +181,15 @@ button {
 
 p {
   margin: 0 3rem;
+}
+
+.blue-btn {
+  color: navy;
+  border: solid .5rem;
+  padding: .25rem .75rem;
+  margin-right: .25rem;
+  user-select: none;
+  cursor: pointer;
 }
 
 .container-margin {

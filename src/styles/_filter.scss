@@ -5,14 +5,16 @@
     padding: 0;
     margin-top: 5rem;
 }
-.clear-container {
+
+@mixin button {
     text-align: center;
-    background: red; 
+    
     color: white; 
     border-radius: .5rem;
     padding: .5rem;
     text-decoration: none;
     font-size: 1.25rem;
+    cursor: pointer;
     &:hover{
         background-color: darkred;
         color: lightgrey;
@@ -21,9 +23,29 @@
     &:active{
         background-color: darkred;
         color: lightgrey;
-        cursor: pointer;
     }
 }
+.clear-container {
+    @include button;
+    background: red;     
+}
+
+.clear-container-blue {
+    @include button;
+    background: navy; 
+    margin-left: 2rem;
+    margin-top: .5rem;
+    &:hover{
+        background-color: darkblue;
+        color: lightgrey;
+    }
+    &:active{
+        background-color: darkblue;
+        color: lightgrey;
+        cursor: pointer;
+    } 
+}
+
 
 .smaller{
     margin-top: 2rem;

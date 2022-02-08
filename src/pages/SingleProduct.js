@@ -29,7 +29,6 @@ const SingleProduct = () => {
         fetchSingleProducts(browser_id);
     }, [browser_id, fetchSingleProducts])
 
-
     const increaseAmount = (e) => {
         e.preventDefault()
         if(single_product.stock === amount){

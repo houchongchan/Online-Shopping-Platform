@@ -1,19 +1,20 @@
 import React, {useState} from 'react';
-import {Link, useLocation} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import About from './About';
+import Header from '../components/Header';
 import Newsletter from '../components/Newsletter';
 
 const Main = () => {
     const Slogan = () => {
         return(
             <>
-                <h1> Top Online Shopping Brand</h1>
+                <Header text = 'Top Online Shopping Brand' />
                 <Link to = '/products'>
-                    <button>
+                    <button className = 'clear-container-blue'>
                         Shopping
                     </button>
                 </Link>
-                <h1> Featured Products </h1>
+                <Header text = 'Featured Products' />
             </>
 
         )

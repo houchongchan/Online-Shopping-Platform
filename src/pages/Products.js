@@ -2,7 +2,7 @@ import React from 'react';
 
 import ProductNav from '../components/ProductNav';
 import ProductList from '../components/ProductsList';
-
+import Header from '../components/Header';
 
 
 const Products = () => {
@@ -13,9 +13,7 @@ const Products = () => {
 
     return (
         <div className = 'container-margin'>
-            <h1>
-                Products
-            </h1>
+            <Header text = 'Products' />
             <hr/> 
    
             <ProductNav />
