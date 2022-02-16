@@ -9,7 +9,6 @@ const UserProvider = ({children}) => {
 
     useEffect(() => {
         setCurrentUser(user)
-        console.log(user);
     }, [user])
 
     return (

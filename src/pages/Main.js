@@ -11,14 +11,13 @@ const Main = () => {
             <>
                 <Header text = 'Top Online Shopping Brand' />
                 <div className = 'hero'>
-                    <video  src = {shopping} autoPlay loop muted type = 'video/mp4'><a href="https://www.vecteezy.com/video/1625419-clouds-and-sky-animated-background"></a></video>
+                    <video  src = {shopping} autoPlay loop muted type = 'video/mp4'>Video by Mixkit -Free Video Assets from Pexels</video>
                     <Link to = '/products'>
                         <button className = 'btn-shopping'>
                             Shop Here
                         </button>
                     </Link>
                 </div>
-                <Header text = 'Featured Products' />
             </>
 
         )
