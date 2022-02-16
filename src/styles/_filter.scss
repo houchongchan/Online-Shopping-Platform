@@ -1,88 +1,112 @@
-
 .filter_container {
-    display: block;
-    margin: 0;
-    padding: 0;
-    margin-top: 5rem;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: 5rem;
 }
 
 @mixin button {
-    text-align: center;
-    
-    color: white; 
-    border-radius: .5rem;
-    padding: .5rem;
-    text-decoration: none;
-    font-size: 1.25rem;
-    cursor: pointer;
-    &:hover{
-        background-color: darkred;
-        color: lightgrey;
+  text-align: center;
 
-    }
-    &:active{
-        background-color: darkred;
-        color: lightgrey;
-    }
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  &:hover {
+    background-color: darkred;
+    color: lightgrey;
+  }
+  &:active {
+    background-color: darkred;
+    color: lightgrey;
+  }
 }
 .clear-container {
-    @include button;
-    background: red;     
+  @include button;
+  background: red;
 }
 
 .clear-container-blue {
-    @include button;
-    background: navy; 
-    margin-left: 2rem;
-    margin-top: .5rem;
-    &:hover{
-        background-color: darkblue;
-        color: lightgrey;
-    }
-    &:active{
-        background-color: darkblue;
-        color: lightgrey;
-        cursor: pointer;
-    } 
+  @include button;
+  background: navy;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  &:hover {
+    background-color: darkblue;
+    color: lightgrey;
+  }
+  &:active {
+    background-color: darkblue;
+    color: lightgrey;
+    cursor: pointer;
+  }
+}
+.btn-shopping {
+  @include button;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+  background: transparent;
+  color: lightgrey;
+  font-size: 3rem;
+  font-weight: light;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  &:hover,
+  &:active {
+    border: rgba(255, 255, 255, 0.8) solid 0.25rem;
+    opacity: 0.8;
+    background: transparent;
+    color: lightgrey;
+    cursor: pointer;
+  }
 }
 
-
-.smaller{
-    margin-top: 2rem;
+.smaller {
+  margin-top: 2rem;
 }
 
 .filter {
-    display: flex;
-    justify-content: space-evenly;
-    visibility: visible;
-    opacity: 1; 
-    margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  visibility: visible;
+  opacity: 1;
+  margin-top: 2rem;
 }
 .center {
-    svg{
-        width: 10vw;
-    }
-
+  svg {
+    width: 10vw;
+  }
 }
 
 .hide {
-    display: none; 
-    visibility: hidden;
-    height: 0;
-    opacity: 0;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-};
+  display: none;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
 
 .show {
-    
-};
+}
 
 @-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
