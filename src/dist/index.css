@@ -15,12 +15,10 @@
   cursor: pointer;
   background: red;
 }
-
 .clear-container:hover {
   background-color: darkred;
   color: lightgrey;
 }
-
 .clear-container:active {
   background-color: darkred;
   color: lightgrey;
@@ -38,22 +36,18 @@
   margin-left: 2rem;
   margin-top: 0.5rem;
 }
-
 .clear-container-blue:hover {
   background-color: darkred;
   color: lightgrey;
 }
-
 .clear-container-blue:active {
   background-color: darkred;
   color: lightgrey;
 }
-
 .clear-container-blue:hover {
   background-color: darkblue;
   color: lightgrey;
 }
-
 .clear-container-blue:active {
   background-color: darkblue;
   color: lightgrey;
@@ -73,28 +67,23 @@
   top: 50%;
   transform: translate(-50%);
   background: transparent;
-  color: lightgrey;
+  color: white;
   font-size: 3rem;
   font-weight: light;
   margin-left: 2rem;
   margin-top: 0.5rem;
 }
-
 .btn-shopping:hover {
   background-color: darkred;
   color: lightgrey;
 }
-
 .btn-shopping:active {
   background-color: darkred;
   color: lightgrey;
 }
-
 .btn-shopping:hover, .btn-shopping:active {
-  border: rgba(255, 255, 255, 0.8) solid 0.25rem;
   opacity: 0.8;
   background: transparent;
-  color: lightgrey;
   cursor: pointer;
 }
 
@@ -119,9 +108,18 @@
   visibility: hidden;
   height: 0;
   opacity: 0;
+  -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -130,7 +128,6 @@
     opacity: 1;
   }
 }
-
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -138,32 +135,33 @@
   font-family: -apple-system;
   font-style: bold;
 }
-
+.navbar-container .link-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .navbar-container .navbar-button {
-  background-color: transparent;
   color: navy;
   text-decoration: none;
-  margin: .5rem 1rem;
-  padding: .25rem;
+  margin: 0.5rem 1rem;
+  padding: 0.25rem;
   font-size: 1.25rem;
-  font-family: -apple-system;
   border-radius: 1rem;
   transition: border-radius 2s;
+  font-weight: 600;
 }
-
 .navbar-container .navbar-button:hover {
-  opacity: .75;
+  opacity: 0.75;
   color: lightblue;
   border-radius: 1.5rem;
 }
-
 .navbar-container .active {
-  text-decoration: underline;
+  background-color: navy;
+  text-decoration: none;
   font-weight: bold;
-  background-color: transparent;
-  color: navy;
+  color: white;
   margin: 1rem 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   transition: border-radius 2s;
 }
@@ -171,7 +169,6 @@
 .search-bar:hover {
   background-color: lightgrey;
 }
-
 @media screen and (max-width: 1000px) {
   .search-bar {
     display: none;
@@ -184,12 +181,41 @@
   box-sizing: border-box;
 }
 
+.home {
+  position: relative;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+}
+
+.home-image {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: 50% 100%;
+}
+
+.home-image2 {
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 100%;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
-
 .hero video {
   overflow: hidden;
   width: 100%;
@@ -244,13 +270,12 @@ p {
 }
 
 .container-margin {
-  margin: 3rem 3rem;
-  width: 90%;
+  margin-top: 1rem;
   overflow: hidden;
 }
 
 .footer {
-  background: #313233;
+  background: rgb(49, 50, 51);
   margin-top: 3rem;
   padding: 1rem;
   color: white;
@@ -263,7 +288,6 @@ p {
   width: 100%;
   padding: 0rem 1rem;
 }
-
 @media screen and (max-width: 992px) {
   .products-container {
     grid-template-columns: repeat(2, 1fr);
@@ -281,12 +305,10 @@ p {
   text-align: left;
   border: 3px solid transparent;
 }
-
 .product-thumbnails:hover {
   border: 5px solid rgba(53, 96, 235, 0.25);
   border-radius: 2rem;
 }
-
 @media screen and (max-width: 992px) {
   .product-thumbnails {
     width: 40vw;
@@ -314,15 +336,10 @@ p {
   color: navy;
   border-radius: 3rem;
 }
-
 @media screen and (max-width: 1200px) {
   .product-description {
     display: none;
   }
-}
-
-.active {
-  text-decoration: underline;
 }
 
 .finish {
@@ -332,7 +349,6 @@ p {
   align-items: center;
   padding-right: 5rem;
 }
-
 .finish div {
   margin: 0 2rem;
 }
@@ -347,7 +363,6 @@ p {
   border-radius: 1rem;
   transition: border-radius 1s;
 }
-
 .finish-button:hover {
   color: white;
   border-radius: 2rem;
@@ -379,7 +394,6 @@ p {
   grid-template-columns: 1fr 1fr;
   text-align: left;
 }
-
 @media screen and (max-width: 1000px) {
   .flex-row {
     text-align: center;
@@ -398,11 +412,9 @@ p {
   font-size: 2rem;
   justify-content: space-between;
 }
-
 .text-display h4 {
   margin: 0;
 }
-
 .text-display h3 {
   margin: 0;
 }
@@ -429,7 +441,6 @@ p {
   display: flex;
   flex-direction: column;
 }
-
 @media screen and (max-width: 1000px) {
   .small-image-container {
     width: 0;
@@ -443,7 +454,6 @@ p {
   object-fit: cover;
   border-radius: 1rem;
 }
-
 @media screen and (max-width: 1000px) {
   .small-image {
     width: 0;
@@ -453,7 +463,6 @@ p {
 .active-image {
   border: 0.25rem solid black;
 }
-
 @media screen and (max-width: 1000px) {
   .active-image {
     width: 0;
@@ -468,11 +477,9 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 .cart-item h3 {
   text-transform: capitalize;
 }
-
 .cart-item img {
   overflow: hidden;
   height: 5rem;
@@ -494,7 +501,6 @@ p {
   justify-content: center;
   font-size: 2rem;
 }
-
 .amount-header * {
   margin: 0.25rem;
 }
@@ -503,11 +509,9 @@ p {
   color: darkred;
   opacity: 0.5;
 }
-
 .cart-button:active {
   color: navy;
 }
-
 .cart-button:disabled {
   color: gray;
 }
@@ -526,4 +530,5 @@ p {
   padding: 2rem;
   box-shadow: 0 5px 5px rgba(53, 96, 235, 0.25);
 }
+
 /*# sourceMappingURL=index.css.map */
