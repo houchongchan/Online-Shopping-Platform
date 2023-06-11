@@ -1,5 +1,3 @@
-import React from "react";
-
 import ProductNav from "../components/ProductNav";
 import ProductList from "../components/ProductsList";
 

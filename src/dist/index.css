@@ -168,6 +168,10 @@
   transition: border-radius 2s;
 }
 
+.search-bar {
+  width: 1000px;
+  height: 40px;
+}
 .search-bar:hover {
   background-color: lightgrey;
 }
@@ -175,6 +179,9 @@
   .search-bar {
     display: none;
   }
+}
+.search-bar::placeholder {
+  font-size: 16px;
 }
 
 :root {
@@ -501,10 +508,6 @@ p {
 
 .hover-cart:hover {
   background: grey;
-}
-
-.login-container {
-  align-items: center;
 }
 
 .amount-header {

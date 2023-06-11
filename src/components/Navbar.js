@@ -38,12 +38,12 @@ const Navbar = () => {
 					PRODUCTS
 				</Link>
 			</div>
-			<div className="login-container">
+			<div>
 				<input
 					type="text"
 					className="search-bar"
 					name="text"
-					placeholder="Search"
+					placeholder="Search for products"
 					onChange={(e) => {
 						updateFilters(e);
 					}}
