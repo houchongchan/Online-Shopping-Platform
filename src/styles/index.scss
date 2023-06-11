@@ -1,5 +1,6 @@
 @import "_filter";
 @import "_navbar";
+@import "_variables";
 
 *,
 ::before,
@@ -10,6 +11,7 @@
 //home page classes
 
 .home {
+	padding: 10px;
 	position: relative;
 }
 .home-grid {
@@ -101,7 +103,7 @@ p {
 }
 
 .container-margin {
-	margin-top: 1rem;
+	padding: 20px;
 	overflow: hidden;
 }
 

@@ -1,25 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import ProductNav from '../components/ProductNav';
-import ProductList from '../components/ProductsList';
-import Header from '../components/Header';
-
+import ProductNav from "../components/ProductNav";
+import ProductList from "../components/ProductsList";
 
 const Products = () => {
+	return (
+		<div className="container-margin">
+			<ProductNav />
+			<ProductList />
+		</div>
+	);
+};
 
-
-
-
-
-    return (
-        <div className = 'container-margin'>
-            <Header text = 'Products' />
-            <hr/> 
-   
-            <ProductNav />
-            <ProductList />
-        </div>
-    )
-}
-
-export default Products
+export default Products;

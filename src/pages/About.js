@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "../context/context";
 import { ReactComponent as Logo } from "../svgs/logo.svg";
 import { useLocation } from "react-router-dom";
+import Header from "../components/Header";
 
 const About = () => {
 	const { productState } = useGlobalContext();
@@ -31,15 +32,9 @@ const About = () => {
 
 	return (
 		<div className="container-margin">
-			<div style={{ display: "flex" }}>
-				<Logo />
-				<h1>ur Company</h1>
-			</div>
+			<Header text="Our Company" />
 			<img src={randomImage} />
-			<div style={{ display: "flex" }}>
-				<Logo />
-				<h1>ur Story</h1>
-			</div>
+			<Header text="Our Story" />
 			<p className="container-margin">
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
 				accusantium sapiente tempora sed dolore esse deserunt eaque excepturi,

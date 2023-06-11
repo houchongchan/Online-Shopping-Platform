@@ -20,15 +20,7 @@ const Navbar = () => {
 	return (
 		<div className="navbar-container">
 			<div className="link-container">
-				<Link
-					to="/"
-					className="navbar-button"
-					style={{
-						marginLeft: "2rem",
-						marginTop: "1rem",
-						textDecoration: "none",
-					}}
-				>
+				<Link to="/" className="navbar-button">
 					<Logo />
 				</Link>
 				<Link
