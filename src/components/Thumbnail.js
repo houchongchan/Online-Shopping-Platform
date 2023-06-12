@@ -1,38 +1,45 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 
+const Thumbnail = ({
+	props: {
+		category,
+		colors,
+		company,
+		description,
+		id,
+		image,
+		name,
+		price,
+		shipping,
+	},
+}) => {
+	const [productdesc, setProductdesc] = useState("Loading");
 
-const Thumbnail = ({props:{category, colors, company, description, id, image, name, price, shipping}}) => {
-    const [ productdesc, setProductdesc] = useState('Loading');
+	const formatPrice = (number) => {
+		return new Intl.NumberFormat("en-US", {
+			style: "currency",
+			currency: "USD",
+		}).format(number / 100);
+	};
 
+	useEffect(() => {
+		setProductdesc(description);
+	}, [description]);
 
-    const formatPrice = (number) => {
-        return new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
-        }).format(number / 100)
-    }
-    
+	let productprice = formatPrice(price);
 
-    useEffect(() =>{
-        setProductdesc(description);
-    },[description])
+	return (
+		<>
+			<img className="product-img" src={image} />
+			<div className="product-header">
+				<h3 style={{ textTransform: "capitalize" }}> {name}</h3>
+				<h4 style={{ color: "red" }}> {productprice}</h4>
+			</div>
+			<div className="product-description">
+				<p> {productdesc} ...</p>
+			</div>
+		</>
+	);
+};
 
-
-
-    let productprice = formatPrice(price);
-
-    return (
-        <>  
-            <img className = 'product-img' src = {image}/> 
-            <div className = 'product-header'> 
-                <h3 style = {{textTransform: "capitalize"}}> {name}</h3>
-                <h4 style = {{color: 'red'}}> {productprice}</h4>
-            </div>
-
-            <p className = 'product-description' > {productdesc} ...</p>
-        </>
-
-    )
-}
-
-export default Thumbnail
+export default Thumbnail;

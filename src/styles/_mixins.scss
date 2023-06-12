@@ -1,0 +1,17 @@
+@mixin button {
+	text-align: center;
+
+	color: white;
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+	font-size: 1.25rem;
+	cursor: pointer;
+	&:hover {
+		background-color: darkred;
+		color: lightgrey;
+	}
+	&:active {
+		background-color: darkred;
+		color: lightgrey;
+	}
+}

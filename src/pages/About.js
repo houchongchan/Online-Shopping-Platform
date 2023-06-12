@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "../context/context";
 import { useLocation } from "react-router-dom";
 import Header from "../components/Header";
-import { placeHolderText } from "../config";
+import { fillerText } from "../config";
 
 const About = () => {
 	const { productState } = useGlobalContext();
@@ -35,7 +35,7 @@ const About = () => {
 			<Header text="Our Company" />
 			<img src={randomImage} />
 			<Header text="Our Story" />
-			<p className="container-margin">{placeHolderText}</p>
+			<p className="container-margin">{fillerText}</p>
 		</div>
 	);
 };

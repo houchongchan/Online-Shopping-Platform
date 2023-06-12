@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/usercontext";
 import { ReactComponent as Logo } from "../svgs/logo.svg";
 import { useFilterContext } from "../context/filter_context";
+import { ReactComponent as SearchIcon } from "../svgs/search.svg";
 
 const Navbar = () => {
 	const location = useLocation();
@@ -15,6 +16,11 @@ const Navbar = () => {
 		if (e.key === "Enter") {
 			navigate("../products", { replace: true });
 		}
+	};
+
+	const handleLogOut = () => {
+		localStorage.removeItem("user");
+		logout({ returnTo: window.location.origin });
 	};
 
 	return (
@@ -38,7 +44,7 @@ const Navbar = () => {
 					PRODUCTS
 				</Link>
 			</div>
-			<div>
+			<div className="flex-row">
 				<input
 					type="text"
 					className="search-bar"
@@ -49,15 +55,12 @@ const Navbar = () => {
 					}}
 					onKeyDown={handleKeyDown}
 				/>
+				<div className="search-icon">
+					<SearchIcon />
+				</div>
 
 				{currentUser ? (
-					<button
-						className="navbar-button"
-						onClick={() => {
-							localStorage.removeItem("user");
-							logout({ returnTo: window.location.origin });
-						}}
-					>
+					<button className="navbar-button" onClick={handleLogOut}>
 						LOGOUT
 					</button>
 				) : (

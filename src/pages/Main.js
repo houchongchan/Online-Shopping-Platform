@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import About from "./About";
 import Advertisement from "../components/Advertisement";
 import Header from "../components/Header";
 import Newsletter from "../components/Newsletter";
@@ -11,35 +10,18 @@ import furniture from "../img/furniture.jpg";
 import sofa from "../img/sofa.jpg";
 
 const Main = () => {
-	const Slogan = () => {
+	const Links = () => {
 		return (
-			<div class="home">
-				<div class="home-grid">
-					<div className="hero">
-						<video src={shopping} autoPlay loop muted type="video/mp4">
-							Video by Mixkit -Free Video Assets from Pexels
-						</video>
-						<Link to="/products">
-							<button className="btn-shopping">Shop Here</button>
-						</Link>
-					</div>
-					<div className="home-image">
-						<img className="home-image" src={livingRoom} alt="room" />
-					</div>
-					<div className="home-image">
-						<img className="home-image" src={furniture} alt="furniture" />
-					</div>
-					<div className="hero">
-						<video src={fashion} autoPlay loop muted type="video/mp4">
-							Video by Mixkit -Free Video Assets from Pexels
-						</video>
-						<Link to="/products">
-							<button className="btn-shopping">Buy Clothes</button>
-						</Link>
-					</div>
-				</div>
-				<div class=" absolute">
-					<img className="home-image2" src={sofa} alt="sofa" />
+			<div class="main-links">
+				<Link to="/products" className="main-display">
+					<video src={shopping} autoPlay loop muted type="video/mp4">
+						Video by Mixkit -Free Video Assets from Pexels
+					</video>
+					<div>Shop Here</div>
+				</Link>
+				<div>
+					<img className="home-image" src={livingRoom} alt="room" />
+					<img className="home-image" src={furniture} alt="furniture" />
 				</div>
 			</div>
 		);
@@ -48,7 +30,7 @@ const Main = () => {
 	return (
 		<div className="container-margin">
 			<Advertisement />
-			<Slogan />
+			<Links />
 			<Header text="Top Online Shopping Brand" />
 			<Newsletter />
 		</div>

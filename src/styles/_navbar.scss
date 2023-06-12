@@ -2,10 +2,11 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-family: -apple-system;
+	font-family: "Source Code Pro", monospace;
 	font-style: bold;
 	box-shadow: var(--global-shadow);
 	background: var(--blue);
+	height: 100px;
 
 	.link-container {
 		display: flex;
@@ -15,7 +16,6 @@
 
 	.navbar-button {
 		color: var(--white);
-		text-decoration: none;
 		margin: 0.5rem 1rem;
 		padding: 0.25rem;
 		font-size: 1.25rem;
@@ -31,7 +31,6 @@
 	}
 	.active {
 		background-color: var(--white);
-		text-decoration: none;
 		font-weight: bold;
 		color: var(--blue);
 		margin: 1rem 1rem;
@@ -42,17 +41,32 @@
 }
 
 .search-bar {
-	width: 1000px;
-	height: 40px;
+	max-width: 600px;
+	height: 100%;
+	display: block;
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
 
 	&:hover {
-		background-color: lightgrey;
+		background-color: var(--light-blue);
 	}
 	@media screen and (max-width: 1000px) {
 		display: none;
 	}
 
 	&::placeholder {
-		font-size: 16px;
+		font-size: 24px;
 	}
+}
+
+.search-icon {
+	border: 2px solid var(--white);
+	height: 100%;
+	aspect-ratio: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
 }
